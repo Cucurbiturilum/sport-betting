@@ -1,0 +1,759 @@
+$main-color: #083040;
+$font-color: #F2F2F2;
+$secondary-font-color: #1A404F;
+$primary-color: #21C299;
+
+
+body {
+  background-color: $main-color;
+  color: $font-color;
+  font-family: lato, sans-serif;
+  background-image: url(../../assets/img/background-opacity.png);
+  background-repeat: no-repeat;
+  margin-right: 5rem;
+  margin-left: 5rem;
+
+  .navbar {
+    padding: 2rem 0;
+    @media (max-width: 990px) {
+      padding: 1rem;
+    }
+
+    .navbar-brand {
+
+      .brand-logo {
+        max-width: 200px;
+        @media (max-width: 540px) {
+          width: 150px;
+        }
+      }
+    }
+
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.1);
+
+      .navbar-toggler-icon {
+        background-image: url(../../assets/img/open-menu.png);
+      }
+    }
+
+    .btn-search {
+      @media (max-width: 990px) {
+        margin-top: 1rem;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      .fa-search {
+        color: $font-color;
+      }
+    }
+
+    .modal {
+      .modal-dialog {
+        .modal-content {
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid $font-color;
+          border-radius: 0;
+
+          .form-inline {
+            .form-control {
+              background-color: transparent;
+              border: none;
+              color: $font-color;
+
+              &:focus {
+                box-shadow: none;
+              }
+
+              &::placeholder {
+                color: $font-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .navbar-nav {
+      .nav-item {
+        @media (max-width: 990px) {
+          margin-top: 1rem;
+        }
+
+        .nav-link {
+          color: $font-color;
+          padding: 0 2rem;
+          @media (max-width: 990px) {
+            padding: 0;
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+
+  .gallery {
+    width: 100%;
+
+    .gallery-container {
+      align-items: center;
+      display: flex;
+      height: 600px;
+      margin: 0 auto;
+      position: relative;
+
+      .card {
+        background-color: $font-color;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0 3px 6px 0 rgba(18, 154, 134, 1);
+        padding: 2rem;
+
+        .card-header {
+          background-color: transparent;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: none;
+          padding: 0;
+          margin-bottom: 1.25rem;
+
+          .time {
+            color: $secondary-font-color;
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 0;
+          }
+
+          .day {
+            color: $secondary-font-color;
+            font-weight: lighter;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            margin-bottom: 0;
+          }
+
+          .teams-logo {
+            position: relative;
+
+            .team-logo-item {
+              overflow: hidden;
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              border: 1px solid #CDCBCB;
+              display: inline-block;
+              text-align: center;
+              padding-top: 4px;
+              background-color: #fff;
+
+              &.host-team {
+                position: absolute;
+                left: -45px;
+                z-index: 2;
+              }
+
+              .team-logo-img {
+                height: 50px;
+                width: 50px;
+              }
+            }
+          }
+        }
+
+        .card-body {
+          padding: 0;
+          margin-bottom: 1.25rem;
+
+          .team {
+            max-width: 350px;
+            border-radius: 20px;
+            box-shadow: 0 3px 6px 0 #CDCBCB;
+          }
+
+          .top-game {
+            text-transform: uppercase;
+            color: #CDCBCB;
+            font-size: 1rem;
+          }
+
+          .score {
+            .team-name, .score-value {
+              color: $secondary-font-color;
+              font-size: 1.56rem;
+            }
+
+            :first-child {
+              .team-name, .score-value {
+                font-weight: lighter;
+              }
+            }
+          }
+        }
+
+        .card-footer {
+          background-color: transparent;
+          border: none;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0;
+
+          .home-win, .draw, .away-win {
+            .simple-odd-value {
+              font-weight: bold;
+              margin-left: 1rem;
+            }
+
+            .btn-success, .btn-secondary, .btn-danger {
+              background-color: #fff;
+              border-radius: 15px;
+              font-size: 1.25rem;
+              min-width: 7rem;
+
+              &:focus {
+                box-shadow: none;
+              }
+            }
+
+            .btn-success {
+              color: #129A86;
+              border-color: #129A86;
+            }
+
+            .btn-secondary {
+              color: #CDCBCB;
+              border-color: #CDCBCB;
+
+              .simple-odd-value {
+                color: black;
+              }
+            }
+
+            .btn-danger {
+              color: #dc3545;
+            }
+          }
+        }
+
+        &.gallery-item-previous, &.gallery-item-next {
+          .card-header {
+            .time {
+              font-size: 1.7rem;
+            }
+
+            .day {
+              font-size: 1.1rem;
+            }
+
+            .teams-logo {
+              .team-logo-item {
+                width: 50px;
+                height: 50px;
+
+                &.host-team {
+                  left: -35px;
+                }
+
+                .team-logo-img {
+                  width: 40px;
+                  height: 40px;
+                }
+              }
+            }
+          }
+
+          .card-body {
+            .score {
+              .team-name, .score-value {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+              }
+            }
+          }
+
+          .card-footer {
+            .home-win, .draw, .away-win {
+              .btn-success, .btn-secondary, .btn-danger {
+                font-size: 1.2rem;
+                min-width: 6rem;
+              }
+            }
+          }
+        }
+
+        &.gallery-item-first, &.gallery-item-last {
+          .card-header {
+            margin-bottom: 0.5rem;
+
+            .time {
+              font-size: 1.5rem;
+            }
+
+            .day {
+              font-size: 0.9rem;
+            }
+
+            .teams-logo {
+              .team-logo-item {
+                width: 40px;
+                height: 40px;
+
+                &.host-team {
+                  left: -25px;
+                }
+
+                .team-logo-img {
+                  width: 30px;
+                  height: 30px;
+                }
+              }
+            }
+          }
+
+          .card-body {
+            .score {
+              .team-name, .score-value {
+                font-size: 1rem;
+                margin-bottom: 0.6rem;
+              }
+            }
+          }
+
+          .card-footer {
+            .home-win, .draw, .away-win {
+              .btn-success, .btn-secondary, .btn-danger {
+                font-size: 1rem;
+                min-width: 5rem;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  .btn-sign-in {
+    border-color: #1DA885;
+    color: #1DA885;
+    border-radius: 25px;
+    border-width: 2px;
+    padding: 0.5rem 2rem;
+    font-size: 1.56rem;
+    margin-bottom: 2rem;
+
+    &:hover {
+      color: #1DA885;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .bookmaker-board {
+    background-color: $secondary-font-color;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 3rem 6rem rgba(1, 3, 38, 0.5);
+    margin-bottom: 2rem;
+
+    .nav-pills {
+      border-bottom: 1px solid #1DA885;
+      padding-bottom: 1rem;
+
+      .nav-item {
+        margin-right: 1rem;
+
+        .nav-link {
+          color: $font-color;
+          font-size: 30px;
+          padding: 0.5rem;
+
+          .fa-futbol, .fa-basketball-ball, .fa-volleyball-ball, .fa-hockey-puck, .fa-chess-knight, .fa-football-ball, .fa-tennis-ball, .fa-headset {
+            display: block;
+          }
+
+          .sport-logo-img {
+            display: none;
+          }
+
+          &.active {
+            background-color: #1DA885;
+            box-shadow: 0 0 10px #198F71;
+            border-radius: 10px !important;
+
+            .fa-futbol, .fa-basketball-ball, .fa-volleyball-ball, .fa-hockey-puck, .fa-chess-knight, .fa-football-ball, .fa-tennis-ball, .fa-headset {
+              display: none;
+            }
+
+            .sport-logo-img {
+              display: block;
+              height: 30px;
+              width: 30px;
+            }
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      .tab-pane {
+        .table {
+          table-layout: auto;
+          width: 100%;
+          margin-bottom: 0;
+
+          thead {
+            padding: 0;
+
+            th {
+              padding: 0;
+              border: none;
+              color: $font-color;
+              font-size: 0.7rem;
+            }
+          }
+
+          tbody {
+            tr {
+              &:nth-child(odd) {
+                background-color: #062633;
+              }
+
+              td {
+                padding: 1rem 0;
+                border: none;
+                text-align: center;
+                vertical-align: middle;
+
+                &:first-child {
+                  border-top-left-radius: 20px;
+                  border-bottom-left-radius: 20px;
+                }
+
+                &:last-child {
+                  border-top-right-radius: 20px;
+                  border-bottom-right-radius: 20px;
+                }
+              }
+
+              .time {
+                color: $font-color;
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin-bottom: 0;
+                margin-left: 1rem;
+              }
+
+              .date {
+                color: $font-color;
+                font-weight: lighter;
+                font-size: 0.8rem;
+                margin-bottom: 0;
+                margin-left: 1rem;
+              }
+
+              .teams-logo {
+                position: relative;
+
+                .team-logo-item {
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  border: 1px solid #CDCBCB;
+                  display: inline-block;
+                  text-align: center;
+                  padding-top: 4px;
+                  background-color: #fff;
+
+                  &.host-team {
+                    z-index: 2;
+                    position: relative;
+                    left: 10px;
+                  }
+
+                  .team-logo-img {
+                    height: 30px;
+                    width: 30px;
+                  }
+                }
+              }
+
+              .score {
+                .team-name, .score-value {
+                  color: $font-color;
+                  font-weight: lighter;
+
+                  &.winner {
+                    font-weight: bold;
+                  }
+                }
+
+                .team-name {
+                  margin-left: 1rem;
+                }
+
+                .score-value {
+                  margin-right: 1rem;
+                }
+              }
+
+              .btn-price {
+                background-color: $font-color;
+                color: $main-color;
+                width: 4rem;
+                padding: 0.6rem 0;
+                border-radius: 15px;
+                border: 1px solid transparent;
+                font-weight: bold;
+
+                &:focus {
+                  box-shadow: none;
+                  background-color: $primary-color;
+                  color: $font-color;
+                }
+
+                &:hover {
+                  border: 1px solid $primary-color;
+                  box-shadow: inset 0 0 10px 0 $primary-color;
+                }
+              }
+
+              .btn-unalienable, .btn-lock {
+                background-color: $font-color;
+                color: grey;
+                width: 4rem;
+                padding: 0.6rem 0;
+                border-radius: 15px;
+                border: 1px solid transparent;
+                font-weight: bold;
+
+                &:focus {
+                  box-shadow: none;
+                }
+              }
+
+              .btn-sort {
+                padding: 0;
+                color: $primary-color;
+
+                &:focus {
+                  box-shadow: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bet-slip {
+    .bet-slip-card {
+      border-radius: 20px;
+      background-color: $secondary-font-color;
+      padding: 1rem;
+
+      .bet-slip-card-header {
+
+        h2 {
+          text-align: center;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+        }
+
+        .nav-tabs {
+          background-color: #062633;;
+          border: none;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1.5rem;
+          margin-left: -1rem;
+          margin-right: -1rem;
+          border-top: 1px solid #1DA885;
+          padding: 0 1rem;
+
+          .nav-item {
+            .nav-link {
+              border-bottom: 2px solid transparent;
+              color: #1DA885;
+              font-weight: lighter;
+              border-radius: 0;
+              padding: 1rem 0.5rem;
+              font-size: 0.875rem;
+
+              &:hover {
+                border: none;
+              }
+
+              &.active {
+                background-color: transparent;
+                border-bottom: 2px solid #1DA885;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                font-weight: normal;
+              }
+            }
+          }
+        }
+      }
+
+      .bet-slip-card-body {
+        max-height: 420px;
+        overflow-y: scroll;
+        padding-right: 5px;
+
+        &::-webkit-scrollbar {
+          width: 6px;
+          background-color: transparent;
+          position: absolute;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: $primary-color;
+          border-radius: 10px;
+        }
+
+        .tab-content {
+          .tab-pane {
+            .bet-slip-ticket {
+              background-color: $font-color;
+              border-radius: 15px;
+              padding: 1rem;
+              box-shadow: 0 3px 6px #198F71;
+              margin-bottom: 1rem;
+
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+
+              .close {
+                top: 0;
+                right: 0.5rem;
+                color: #198F71;
+              }
+
+              .teams-logo {
+                margin-bottom: 0.2rem;
+
+                .team-logo-item {
+                  width: 35px;
+                  height: 35px;
+                  border-radius: 50%;
+                  border: 1px solid #CDCBCB;
+                  text-align: center;
+                  background-color: #fff;
+                  margin-right: 0.5rem;
+                  padding-top: 2px;
+
+                  .team-logo-img {
+                    width: 25px;
+                    height: 25px;
+                  }
+                }
+
+                .team-name {
+                  color: $secondary-font-color;
+                  font-size: 1.1rem;
+                  margin-bottom: 0;
+                }
+
+                &.host-team {
+                  .team-name {
+                    font-weight: lighter;
+                  }
+                }
+
+                &.guest-team {
+                  margin-bottom: 1rem;
+                }
+              }
+
+              .price {
+                margin-bottom: 1rem;
+
+                .selected-team {
+                  color: $secondary-font-color;
+                  font-size: 1.1rem;
+                  margin-bottom: 0;
+                }
+
+                .selected-bet {
+                  border-radius: 15px;
+                  background-color: #1DA885;
+                  padding: 0 1rem;
+                  font-size: 1.1rem;
+                  margin-bottom: 0;
+                }
+              }
+
+              .stakeWin {
+                .form-control {
+                  border-color: #1DA885;
+                  border-radius: 15px;
+                  height: auto;
+                  padding: 0.2rem 0.7rem;
+                  color: $secondary-font-color;
+
+                  &::placeholder {
+                    color: #CDCBCB;
+                    text-align: center;
+                  }
+
+                  &:focus {
+                    box-shadow: none;
+                  }
+
+                  &.stake {
+                    margin-right: 0.5rem;
+                  }
+
+                  &.win {
+                    margin-left: 0.5rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .bet-slip-card-footer {
+        padding: 1rem 1rem 0 1rem;
+        .total, .amount{
+          font-size: 1.1rem;
+        }
+        .place-bet{
+          color: $primary-color;
+          font-size: 1.5rem;
+          padding: 0.5rem 3rem;
+          background-color: #062633;
+          box-shadow: 0 3rem 6rem #062633;
+          border-radius: 20px;
+          width: 100%;
+          &:focus{
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  footer{
+    margin: 0 -5rem;
+    border-top: 1px solid $primary-color;
+    border-bottom: 1px solid $primary-color;
+    .nav{
+      border-top: 1px solid $primary-color;
+      border-bottom: 1px solid $primary-color;
+      margin: 0.3rem 0;
+    }
+  }
+}

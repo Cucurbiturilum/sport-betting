@@ -124,3 +124,6 @@ exampleCarousel.setControls();
 exampleCarousel.setNav();
 exampleCarousel.setInitialState();
 exampleCarousel.useControls();
+
+$('.gallery-controls-previous').html('<i class="fas fa-chevron-left"></i>');
+$('.gallery-controls-next').html('<i class="fas fa-chevron-right"></i>');

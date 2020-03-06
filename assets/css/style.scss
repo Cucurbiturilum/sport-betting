@@ -10,13 +10,15 @@ body {
   font-family: lato, sans-serif;
   background-image: url(../../assets/img/background-opacity.png);
   background-repeat: no-repeat;
-  margin-right: 5rem;
-  margin-left: 5rem;
+  margin: 0 1rem;
+  @media (min-width: 768px) {
+    margin: 0 5rem;
+  }
 
   .navbar {
     padding: 2rem 0;
     @media (max-width: 990px) {
-      padding: 1rem;
+      padding: 1rem 0;
     }
 
     .navbar-brand {
@@ -30,10 +32,16 @@ body {
     }
 
     .navbar-toggler {
-      border-color: rgba(255, 255, 255, 0.1);
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
 
       .navbar-toggler-icon {
         background-image: url(../../assets/img/open-menu.png);
+        width: 1.2rem;
+        height: 1.2rem;
       }
     }
 
@@ -97,7 +105,7 @@ body {
   }
 
   .gallery {
-    width: 100%;
+    position: relative;
 
     .gallery-container {
       align-items: center;
@@ -105,6 +113,7 @@ body {
       height: 600px;
       margin: 0 auto;
       position: relative;
+      max-width: 1200px;
 
       .card {
         background-color: $font-color;
@@ -335,6 +344,261 @@ body {
         }
       }
 
+      .gallery-item-first, .gallery-item-last{
+        &.card{
+          padding:1.5rem 2rem;
+          .team {
+            width: 270px;
+          }
+          .top-game{
+            font-size: 0.8rem;
+           margin-bottom: 0.1rem;
+          }
+        }
+      }
+
+    }
+
+    .gallery-controls {
+      display: block;
+
+      .gallery-controls-previous, .gallery-controls-next {
+        background-color: transparent;
+        color: $primary-color;
+        font-size: 1.5rem;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      .gallery-controls-previous {
+        position: absolute;
+        left: -5%;
+        top: calc(50% - 0.75rem);
+      }
+
+      .gallery-controls-next {
+        position: absolute;
+        right: -5%;
+        top: calc(50% - 0.75rem);
+      }
+    }
+  }
+
+  #galleryFadeMobile {
+    margin-bottom: 30px;
+
+    .carousel-inner {
+      @media (min-width: 540px) {
+        min-width: 400px;
+      }
+
+      .card {
+        background-color: $font-color;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0 3px 6px 0 rgba(18, 154, 134, 1);
+        padding: 1rem;
+
+        .card-header {
+          background-color: transparent;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: none;
+          padding: 0;
+          margin-bottom: 1rem;
+
+          .time {
+            color: $secondary-font-color;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            @media (min-width: 540px) {
+              font-size: 1.5rem;
+            }
+          }
+
+          .day {
+            color: $secondary-font-color;
+            font-weight: lighter;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            @media (min-width: 540px) {
+              font-size: 1rem;
+            }
+          }
+
+          .teams-logo {
+            position: relative;
+
+            .team-logo-item {
+              overflow: hidden;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              border: 1px solid #CDCBCB;
+              display: inline-block;
+              text-align: center;
+              padding-top: 4px;
+              background-color: #fff;
+              @media (min-width: 540px) {
+                width: 60px;
+                height: 60px;
+              }
+
+              &.host-team {
+                position: absolute;
+                left: -30px;
+                z-index: 2;
+                @media (min-width: 540px) {
+                  left: -45px;
+                }
+              }
+
+              .team-logo-img {
+                height: 30px;
+                width: 30px;
+                @media (min-width: 540px) {
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+            }
+          }
+        }
+
+        .card-body {
+          padding: 0;
+          margin-bottom: 0;
+
+          .team {
+            max-width: 250px;
+            border-radius: 20px;
+            box-shadow: 0 3px 6px 0 #CDCBCB;
+            @media (min-width: 540px) {
+              min-width: calc(400px - 2rem);
+            }
+          }
+
+          .top-game {
+            text-transform: uppercase;
+            color: #CDCBCB;
+            font-size: 0.8rem;
+          }
+
+          .score {
+            .team-name, .score-value {
+              color: $secondary-font-color;
+              font-size: 1.3rem;
+              @media (min-width: 540px) {
+                font-size: 1.5rem;
+              }
+            }
+
+            :first-child {
+              .team-name, .score-value {
+                font-weight: lighter;
+              }
+            }
+          }
+        }
+
+        .card-footer {
+          background-color: transparent;
+          border: none;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0;
+
+          .home-win, .draw {
+            margin-right: 0.5rem;
+          }
+
+          .home-win, .draw, .away-win {
+            .simple-odd-value {
+              font-weight: bold;
+              margin-left: 0.5rem;
+            }
+
+            .btn-success, .btn-secondary, .btn-danger {
+              background-color: #fff;
+              border-radius: 15px;
+              font-size: 0.8rem;
+              width: 5rem;
+              @media (min-width: 540px) {
+                min-width: 6rem;
+                font-size: 1rem;
+              }
+
+              &:focus {
+                box-shadow: none;
+              }
+            }
+
+            .btn-success {
+              color: #129A86;
+              border-color: #129A86;
+            }
+
+            .btn-secondary {
+              color: #CDCBCB;
+              border-color: #CDCBCB;
+
+              .simple-odd-value {
+                color: black;
+              }
+            }
+
+            .btn-danger {
+              color: #dc3545;
+            }
+          }
+        }
+      }
+    }
+
+    .carousel-control-next {
+      right: -1.6rem;
+      opacity: 1;
+      @media (min-width: 375px) and (max-width: 540px) {
+        right: -2.5rem;
+      }
+      @media (min-width: 540px) and (max-width: 650px) {
+        right: -5rem;
+      }
+      @media (min-width: 650px) {
+        right: -8rem;
+      }
+
+      .carousel-control-next-icon {
+        background-image: url(../../assets/img/icon-awesome-angle-right.svg);
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .carousel-control-prev {
+      left: -1.6rem;
+      opacity: 1;
+      @media (min-width: 375px) and (max-width: 540px) {
+        left: -2.5rem;
+      }
+      @media (min-width: 540px) and (max-width: 650px) {
+        left: -5rem;
+      }
+      @media (min-width: 650px) {
+        left: -8rem;
+      }
+
+      .carousel-control-prev-icon {
+        background-image: url(../../assets/img/icon-awesome-angle-left.svg);
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 
@@ -344,8 +608,10 @@ body {
     border-radius: 25px;
     border-width: 2px;
     padding: 0.5rem 2rem;
-    font-size: 1.56rem;
     margin-bottom: 2rem;
+    @media (min-width: 540px) {
+      font-size: 1.56rem;
+    }
 
     &:hover {
       color: #1DA885;
@@ -549,6 +815,17 @@ body {
               }
             }
           }
+
+          .under, .handicap, .over {
+            @media (max-width: 1024px) {
+              display: none;
+            }
+          }
+          .logos, .date-time-container{
+            @media (max-width: 1024px) {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -723,14 +1000,29 @@ body {
             }
           }
         }
+
       }
 
       .bet-slip-card-footer {
-        padding: 1rem 1rem 0 1rem;
-        .total, .amount{
+        padding: 0 1rem 0 1rem;
+
+        &:before {
+          content: '';
+          display: block;
+          background-image: url(../../assets/img/group51.svg);
+          height: 16px;
+          margin: 0 -2rem 1rem -2rem;
+          background-size: cover;
+          position: relative;
+          top: -14px;
+          background-repeat: no-repeat;
+        }
+
+        .total, .amount {
           font-size: 1.1rem;
         }
-        .place-bet{
+
+        .place-bet {
           color: $primary-color;
           font-size: 1.5rem;
           padding: 0.5rem 3rem;
@@ -738,7 +1030,8 @@ body {
           box-shadow: 0 3rem 6rem #062633;
           border-radius: 20px;
           width: 100%;
-          &:focus{
+
+          &:focus {
             box-shadow: none;
           }
         }
@@ -746,14 +1039,21 @@ body {
     }
   }
 
-  footer{
-    margin: 0 -5rem;
+  footer {
+    margin: 0 -5rem 0.5rem -5rem;
     border-top: 1px solid $primary-color;
     border-bottom: 1px solid $primary-color;
-    .nav{
+
+    .nav {
       border-top: 1px solid $primary-color;
       border-bottom: 1px solid $primary-color;
       margin: 0.3rem 0;
+
+      .nav-item {
+        .nav-link {
+          color: $font-color;
+        }
+      }
     }
   }
 }

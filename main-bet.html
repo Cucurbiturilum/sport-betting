@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-pro-5.12.0-web/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="assets/fonts/fontawesome-pro-5.12.0-web/js/all.js"></script>
+    <script src="assets/js/main.js"></script>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/logo.png" alt="logo" class="brand-logo">
+        </a>
+        <button type="button" class="btn btn-search ml-auto" data-toggle="modal" data-target="#searchModal">
+            <i class="fas fa-search"></i>
+        </button>
+        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog"
+             aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2 w-100" type="text" placeholder="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+            <div class="d-flex flex-column flex-lg-row align-items-end align-items-lg-center">
+                <ul class="navbar-nav text-right order-md-2">
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#">register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#">log in</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-1 sport-sidebar">
+            <ul class="nav sidebar">
+                <button class="btn sidebar-toggle" type="button">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <li class="nav-item">
+                    <a class="nav-link active d-flex justify-content-start align-items-center">
+                        <i class="fad fa-futbol"></i>
+                        <img src="assets/img/icons/soccer.svg" alt="soccer" class="sport-logo-img">
+                        <span class="sport-name ml-3">
+                Soccer
+            </span>
+                        <span class="badge ml-auto">+12</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-start align-items-center">
+                        <i class="fas fa-basketball-ball"></i>
+                        <img src="assets/img/icons/basketball-court.svg" alt="basketball" class="sport-logo-img">
+                        <span class="sport-name ml-3">
+               Basketball
+            </span>
+                        <span class="badge ml-auto">+1</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-start align-items-center">
+                        <i class="fas fa-tennis-ball"></i>
+                        <img src="assets/img/icons/tennis.svg" alt="tennis" class="sport-logo-img">
+                        <span class="sport-name ml-3">
+               Tennis
+            </span>
+                        <span class="badge ml-auto">+5</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-start align-items-center">
+                        <i class="fas fa-volleyball-ball"></i>
+                        <img src="assets/img/icons/ball.svg" alt="volleyball" class="sport-logo-img">
+                        <span class="sport-name ml-3">
+              Volleyball
+            </span>
+                        <span class="badge ml-auto">+8</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-start align-items-center">
+                        <i class="fas fa-football-ball"></i>
+                        <img src="assets/img/icons/rugby-ball.svg" alt="rugby" class="sport-logo-img">
+                        <span class="sport-name ml-3">
+               Football
+            </span>
+                        <span class="badge ml-auto">+5</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-start align-items-center">
+                        <i class="fas fa-hockey-puck"></i>
+                        <img src="assets/img/icons/hockey.svg" alt="hockey" class="sport-logo-img">
+                        <span class="sport-name ml-3">
+              Hockey
+            </span>
+                        <span class="badge ml-auto">+4</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-start align-items-center">
+                        <i class="fas fa-headset"></i>
+                        <img src="assets/img/icons/headset.svg" alt="headset" class="sport-logo-img">
+                        <span class="sport-name ml-3">
+              Esports
+            </span>
+                        <span class="badge ml-auto">+4</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-start align-items-center">
+                        <i class="fas fa-chess-knight"></i>
+                        <img src="assets/img/icons/chess.svg" alt="chess" class="sport-logo-img">
+                        <span class="sport-name ml-3">
+               Chess
+            </span>
+                        <span class="badge ml-auto">+6</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-8">
+            <div class="main-bet w-100">
+                <div class="main-bet-header d-flex align-self-center align-items-center">
+                    <div>
+                        <p class="host-team mb-0">
+                            Mitteldeutscher BC
+                        </p>
+                    </div>
+                    <div>
+                        <div class="date-time-container text-center">
+                            Wednesday, 12 February 19:00
+                            <small class="d-block">Germany - Bundesliga</small>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="guest-team mb-0">
+                            Rasta Vechta
+                        </p>
+                    </div>
+                </div>
+                <div class="main-bet-body">
+                    <ul class="nav nav-pills mb-3" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="money-line-tab" data-toggle="pill" href="#pills-money-line"
+                               role="tab" aria-controls="pills-money-line" aria-selected="true">Money line – Game</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="handicap-tab" data-toggle="pill" href="#pills-handicap"
+                               role="tab" aria-controls="pills-profile" aria-selected="false">Handicap – Game</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="total-tab" data-toggle="pill" href="#pills-contact"
+                               role="tab" aria-controls="pills-handicap" aria-selected="false">Total – Game</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="team-total-tab" data-toggle="pill" href="#pills-home"
+                               role="tab" aria-controls="pills-home" aria-selected="true">Team Total – Game</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="money-line–half-tab" data-toggle="pill" href="#pills-profile"
+                               role="tab" aria-controls="pills-profile" aria-selected="false">Money line – 1st Half</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="handicap-half-tab" data-toggle="pill" href="#pills-contact"
+                               role="tab" aria-controls="pills-contact" aria-selected="false">Handicap – 1st Half</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="total-half-tab" data-toggle="pill" href="#pills-profile"
+                               role="tab" aria-controls="pills-profile" aria-selected="false">Total – 1st Half</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="team-total-half-tab" data-toggle="pill" href="#pills-contact"
+                               role="tab" aria-controls="pills-contact" aria-selected="false">Team Total – 1st Half</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-money-line" role="tabpanel"  aria-labelledby="money-line-tab">
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Mitteldeutscher BC</span>
+                                <span class="bet-count float-right">1.632</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Rasta Vechta</span>
+                                <span class="bet-count float-right">3.567</span>
+                            </button>
+                        </div>
+                        <div class="tab-pane fade" id="pills-handicap" role="tabpanel"aria-labelledby="handicap-tab">
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Mitteldeutscher BC</span>
+                                <span class="bet-count float-right">1.632</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Rasta Vechta</span>
+                                <span class="bet-count float-right">3.567</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Mitteldeutscher BC</span>
+                                <span class="bet-count float-right">1.632</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Rasta Vechta</span>
+                                <span class="bet-count float-right">3.567</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Mitteldeutscher BC</span>
+                                <span class="bet-count float-right">1.632</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Rasta Vechta</span>
+                                <span class="bet-count float-right">3.567</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Mitteldeutscher BC</span>
+                                <span class="bet-count float-right">1.632</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Rasta Vechta</span>
+                                <span class="bet-count float-right">3.567</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Mitteldeutscher BC</span>
+                                <span class="bet-count float-right">1.632</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Rasta Vechta</span>
+                                <span class="bet-count float-right">3.567</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Mitteldeutscher BC</span>
+                                <span class="bet-count float-right">1.632</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Rasta Vechta</span>
+                                <span class="bet-count float-right">3.567</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Mitteldeutscher BC</span>
+                                <span class="bet-count float-right">1.632</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Rasta Vechta</span>
+                                <span class="bet-count float-right">3.567</span>
+                            </button>
+                            <button class="btn btn-bet" type="button">
+                            <span class="float-left">Mitteldeutscher BC</span>
+                            <span class="bet-count float-right">1.632</span>
+                        </button>
+                            <button class="btn btn-bet" type="button">
+                                <span class="float-left">Rasta Vechta</span>
+                                <span class="bet-count float-right">3.567</span>
+                            </button>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                             aria-labelledby="pills-contact-tab">...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="bet-slip">
+                <div class="bet-slip-card">
+                    <div class="bet-slip-card-header">
+                        <h2 class="text-uppercase">bet slip</h2>
+                        <ul class="nav nav-tabs" id="betSlipTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active text-uppercase" id="singles-tab" data-toggle="tab"
+                                   href="#singles"
+                                   role="tab"
+                                   aria-controls="singles" aria-selected="true">singles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" id="multiples-tab" data-toggle="tab"
+                                   href="#multiples"
+                                   role="tab"
+                                   aria-controls="multiples" aria-selected="false">multiples</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" id="teasers-tab" data-toggle="tab" href="#teasers"
+                                   role="tab"
+                                   aria-controls="teasers" aria-selected="false">teasers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bet-slip-card-body">
+                        <div class="tab-content" id="betSlipContent">
+                            <div class="tab-pane fade show active position-relative" id="singles" role="tabpanel"
+                                 aria-labelledby="singles-tab">
+                                <div class="bet-slip-ticket">
+                                    <button type="button" class="close position-absolute" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="teams-logo host-team">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/FC_Chelsea_Logo.svg.png" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            San Martin De Tucuman
+                                        </p>
+                                    </div>
+                                    <div class="teams-logo guest-team d-inline-block">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/Tottenham_Hotspur.svg" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            Almagro BA
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-between">
+                                        <p class="selected-team">
+                                            Almagro BA
+                                        </p>
+                                        <p class="selected-bet">
+                                            3.25
+                                        </p>
+                                    </div>
+                                    <div class="stakeWin d-flex justify-content-between">
+                                        <input type="text" class="form-control stake" placeholder="Stake">
+                                        <input type="text" class="form-control win" placeholder="Win">
+                                    </div>
+                                </div>
+                                <div class="bet-slip-ticket">
+                                    <button type="button" class="close position-absolute" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="teams-logo host-team">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/FC_Chelsea_Logo.svg.png" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            San Martin De Tucuman
+                                        </p>
+                                    </div>
+                                    <div class="teams-logo guest-team d-inline-block">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/Tottenham_Hotspur.svg" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            Almagro BA
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-between">
+                                        <p class="selected-team">
+                                            Almagro BA
+                                        </p>
+                                        <p class="selected-bet">
+                                            3.25
+                                        </p>
+                                    </div>
+                                    <div class="stakeWin d-flex justify-content-between">
+                                        <input type="text" class="form-control stake" placeholder="Stake">
+                                        <input type="text" class="form-control win" placeholder="Win">
+                                    </div>
+                                </div>
+                                <div class="bet-slip-ticket">
+                                    <button type="button" class="close position-absolute" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="teams-logo host-team">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/FC_Chelsea_Logo.svg.png" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            San Martin De Tucuman
+                                        </p>
+                                    </div>
+                                    <div class="teams-logo guest-team d-inline-block">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/Tottenham_Hotspur.svg" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            Almagro BA
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-between">
+                                        <p class="selected-team">
+                                            Almagro BA
+                                        </p>
+                                        <p class="selected-bet">
+                                            3.25
+                                        </p>
+                                    </div>
+                                    <div class="stakeWin d-flex justify-content-between">
+                                        <input type="text" class="form-control stake" placeholder="Stake">
+                                        <input type="text" class="form-control win" placeholder="Win">
+                                    </div>
+                                </div>
+                                <div class="bet-slip-ticket">
+                                    <button type="button" class="close position-absolute" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="teams-logo host-team">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/FC_Chelsea_Logo.svg.png" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            San Martin De Tucuman
+                                        </p>
+                                    </div>
+                                    <div class="teams-logo guest-team d-inline-block">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/Tottenham_Hotspur.svg" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            Almagro BA
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-between">
+                                        <p class="selected-team">
+                                            Almagro BA
+                                        </p>
+                                        <p class="selected-bet">
+                                            3.25
+                                        </p>
+                                    </div>
+                                    <div class="stakeWin d-flex justify-content-between">
+                                        <input type="text" class="form-control stake" placeholder="Stake">
+                                        <input type="text" class="form-control win" placeholder="Win">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="multiples" role="tabpanel" aria-labelledby="multiples-tab">
+                                <div class="bet-slip-ticket">
+                                    <button type="button" class="close position-absolute" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="teams-logo host-team">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/FC_Chelsea_Logo.svg.png" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            San Martin De Tucuman
+                                        </p>
+                                    </div>
+                                    <div class="teams-logo guest-team d-inline-block">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/Tottenham_Hotspur.svg" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            Almagro BA
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-between">
+                                        <p class="selected-team">
+                                            Almagro BA
+                                        </p>
+                                        <p class="selected-bet">
+                                            3.25
+                                        </p>
+                                    </div>
+                                    <div class="stakeWin d-flex justify-content-between">
+                                        <input type="text" class="form-control stake" placeholder="Stake">
+                                        <input type="text" class="form-control win" placeholder="Win">
+                                    </div>
+                                </div>
+                                <div class="bet-slip-ticket">
+                                    <button type="button" class="close position-absolute" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="teams-logo host-team">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/FC_Chelsea_Logo.svg.png" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            San Martin De Tucuman
+                                        </p>
+                                    </div>
+                                    <div class="teams-logo guest-team d-inline-block">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/Tottenham_Hotspur.svg" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            Almagro BA
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-between">
+                                        <p class="selected-team">
+                                            Almagro BA
+                                        </p>
+                                        <p class="selected-bet">
+                                            3.25
+                                        </p>
+                                    </div>
+                                    <div class="stakeWin d-flex justify-content-between">
+                                        <input type="text" class="form-control stake" placeholder="Stake">
+                                        <input type="text" class="form-control win" placeholder="Win">
+                                    </div>
+                                </div>
+                                <div class="bet-slip-ticket">
+                                    <button type="button" class="close position-absolute" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="teams-logo host-team">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/FC_Chelsea_Logo.svg.png" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            San Martin De Tucuman
+                                        </p>
+                                    </div>
+                                    <div class="teams-logo guest-team d-inline-block">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/Tottenham_Hotspur.svg" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            Almagro BA
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-between">
+                                        <p class="selected-team">
+                                            Almagro BA
+                                        </p>
+                                        <p class="selected-bet">
+                                            3.25
+                                        </p>
+                                    </div>
+                                    <div class="stakeWin d-flex justify-content-between">
+                                        <input type="text" class="form-control stake" placeholder="Stake">
+                                        <input type="text" class="form-control win" placeholder="Win">
+                                    </div>
+                                </div>
+                                <div class="bet-slip-ticket">
+                                    <button type="button" class="close position-absolute" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="teams-logo host-team">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/FC_Chelsea_Logo.svg.png" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            San Martin De Tucuman
+                                        </p>
+                                    </div>
+                                    <div class="teams-logo guest-team d-inline-block">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/Tottenham_Hotspur.svg" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            Almagro BA
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-between">
+                                        <p class="selected-team">
+                                            Almagro BA
+                                        </p>
+                                        <p class="selected-bet">
+                                            3.25
+                                        </p>
+                                    </div>
+                                    <div class="stakeWin d-flex justify-content-between">
+                                        <input type="text" class="form-control stake" placeholder="Stake">
+                                        <input type="text" class="form-control win" placeholder="Win">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="teasers" role="tabpanel" aria-labelledby="teasers-tab">
+                                <div class="bet-slip-ticket">
+                                    <button type="button" class="close position-absolute" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="teams-logo host-team">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/FC_Chelsea_Logo.svg.png" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            San Martin De Tucuman
+                                        </p>
+                                    </div>
+                                    <div class="teams-logo guest-team d-inline-block">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/Tottenham_Hotspur.svg" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            Almagro BA
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-between">
+                                        <p class="selected-team">
+                                            Almagro BA
+                                        </p>
+                                        <p class="selected-bet">
+                                            3.25
+                                        </p>
+                                    </div>
+                                    <div class="stakeWin d-flex justify-content-between">
+                                        <input type="text" class="form-control stake" placeholder="Stake">
+                                        <input type="text" class="form-control win" placeholder="Win">
+                                    </div>
+                                </div>
+                                <div class="bet-slip-ticket">
+                                    <button type="button" class="close position-absolute" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="teams-logo host-team">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/FC_Chelsea_Logo.svg.png" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            San Martin De Tucuman
+                                        </p>
+                                    </div>
+                                    <div class="teams-logo guest-team d-inline-block">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/Tottenham_Hotspur.svg" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            Almagro BA
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-between">
+                                        <p class="selected-team">
+                                            Almagro BA
+                                        </p>
+                                        <p class="selected-bet">
+                                            3.25
+                                        </p>
+                                    </div>
+                                    <div class="stakeWin d-flex justify-content-between">
+                                        <input type="text" class="form-control stake" placeholder="Stake">
+                                        <input type="text" class="form-control win" placeholder="Win">
+                                    </div>
+                                </div>
+                                <div class="bet-slip-ticket">
+                                    <button type="button" class="close position-absolute" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="teams-logo host-team">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/FC_Chelsea_Logo.svg.png" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            San Martin De Tucuman
+                                        </p>
+                                    </div>
+                                    <div class="teams-logo guest-team d-inline-block">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/Tottenham_Hotspur.svg" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            Almagro BA
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-between">
+                                        <p class="selected-team">
+                                            Almagro BA
+                                        </p>
+                                        <p class="selected-bet">
+                                            3.25
+                                        </p>
+                                    </div>
+                                    <div class="stakeWin d-flex justify-content-between">
+                                        <input type="text" class="form-control stake" placeholder="Stake">
+                                        <input type="text" class="form-control win" placeholder="Win">
+                                    </div>
+                                </div>
+                                <div class="bet-slip-ticket">
+                                    <button type="button" class="close position-absolute" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="teams-logo host-team">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/FC_Chelsea_Logo.svg.png" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            San Martin De Tucuman
+                                        </p>
+                                    </div>
+                                    <div class="teams-logo guest-team d-inline-block">
+                                        <div class="team-logo-item d-inline-block">
+                                            <img src="assets/img/Tottenham_Hotspur.svg" alt="teem-logo"
+                                                 class="team-logo-img"/>
+                                        </div>
+                                        <p class="team-name d-inline-block">
+                                            Almagro BA
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-between">
+                                        <p class="selected-team">
+                                            Almagro BA
+                                        </p>
+                                        <p class="selected-bet">
+                                            3.25
+                                        </p>
+                                    </div>
+                                    <div class="stakeWin d-flex justify-content-between">
+                                        <input type="text" class="form-control stake" placeholder="Stake">
+                                        <input type="text" class="form-control win" placeholder="Win">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bet-slip-card-footer">
+                        <div class="d-flex justify-content-between">
+                            <p class="total">Total Stake</p>
+                            <p class="amount">EUR <span>0.00</span></p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="total">Total Win</p>
+                            <p class="amount">EUR <span>0.00</span></p>
+                        </div>
+                        <button type="submit" class="btn place-bet text-uppercase d-block mx-auto">
+                            place bet
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

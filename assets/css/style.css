@@ -11,74 +11,72 @@ body {
     margin: 0 3rem;
   }
 }
-body::-webkit-scrollbar {
-  display: none;
+body header {
+  padding: 0 15px;
 }
-body .navbar {
+body header .navbar {
   padding: 2rem 0;
 }
 @media (max-width: 990px) {
-  body .navbar {
+  body header .navbar {
     padding: 1rem 0;
   }
 }
-body .navbar .navbar-brand .brand-logo {
+body header .navbar .navbar-brand .brand-logo {
   max-width: 200px;
 }
 @media (max-width: 540px) {
-  body .navbar .navbar-brand .brand-logo {
+  body header .navbar .navbar-brand .brand-logo {
     width: 150px;
   }
 }
-body .navbar .navbar-toggler {
+body header .navbar .navbar-toggler {
   border: none;
 }
-body .navbar .navbar-toggler:focus {
+body header .navbar .navbar-toggler:focus {
   outline: none;
 }
-body .navbar .navbar-toggler .navbar-toggler-icon {
+body header .navbar .navbar-toggler .navbar-toggler-icon {
   background-image: url(../../assets/img/open-menu.png);
   width: 1.2rem;
   height: 1.2rem;
 }
-body .navbar .btn-search {
+body header .navbar .btn-search {
   margin: 0;
 }
-body .navbar .btn-search:focus {
+body header .navbar .btn-search:focus {
   box-shadow: none;
 }
-body .navbar .btn-search .fa-search {
+body header .navbar .btn-search .fa-search {
   color: #F2F2F2;
 }
-body .navbar .modal .modal-dialog .modal-content {
+body header .navbar .modal .modal-dialog .modal-content {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #F2F2F2;
   border-radius: 0;
 }
-body .navbar .modal .modal-dialog .modal-content .form-inline .form-control {
+body header .navbar .modal .modal-dialog .modal-content .form-inline .form-control {
   background-color: transparent;
   border: none;
   color: #F2F2F2;
 }
-body .navbar .modal .modal-dialog .modal-content .form-inline .form-control:focus {
+body header .navbar .modal .modal-dialog .modal-content .form-inline .form-control:focus {
   box-shadow: none;
 }
-body .navbar .modal .modal-dialog .modal-content .form-inline .form-control::placeholder {
+body header .navbar .modal .modal-dialog .modal-content .form-inline .form-control::placeholder {
   color: #F2F2F2;
 }
-@media (max-width: 990px) {
-  body .navbar .navbar-nav .nav-item {
-    margin-top: 1rem;
-  }
-}
-body .navbar .navbar-nav .nav-item .nav-link {
+body header .navbar .navbar-nav .nav-item .nav-link {
   color: #F2F2F2;
   padding: 0 2rem;
   font-size: 1rem;
 }
-@media (max-width: 600px) {
-  body .navbar .navbar-nav .nav-item .nav-link {
+@media (max-width: 990px) {
+  body header .navbar .navbar-nav .nav-item {
+    margin-top: 1rem;
+  }
+  body header .navbar .navbar-nav .nav-item .nav-link {
     padding: 0;
   }
 }
@@ -278,12 +276,12 @@ body .gallery .gallery-controls .gallery-controls-previous:before, body .gallery
 }
 body .gallery .gallery-controls .gallery-controls-previous {
   position: absolute;
-  left: -5%;
+  left: -3%;
   top: calc(50% - 0.75rem);
 }
 body .gallery .gallery-controls .gallery-controls-next {
   position: absolute;
-  right: -5%;
+  right: -3%;
   top: calc(50% - 0.75rem);
 }
 body #galleryFadeMobile {
@@ -547,6 +545,9 @@ body .bookmaker-board .nav-pills {
   flex-wrap: nowrap;
   overflow-x: scroll;
 }
+body .bookmaker-board .nav-pills::-webkit-scrollbar {
+  display: none;
+}
 body .bookmaker-board .nav-pills .nav-item {
   margin-right: 1rem;
 }
@@ -605,7 +606,7 @@ body .bookmaker-board .tab-content .tab-pane .table thead th {
   color: #F2F2F2;
   font-size: 0.7rem;
 }
-body .bookmaker-board .tab-content .tab-pane .table tbody tr:nth-child(odd) {
+body .bookmaker-board .tab-content .tab-pane .table tbody tr:nth-child(odd) td {
   background-color: #062633;
 }
 body .bookmaker-board .tab-content .tab-pane .table tbody tr td {
@@ -640,6 +641,12 @@ body .bookmaker-board .tab-content .tab-pane .table tbody tr td:last-child {
     border-bottom-left-radius: 20px;
   }
 }
+@media (min-width: 1200px) and (max-width: 1330px) {
+  body .bookmaker-board .tab-content .tab-pane .table tbody tr td:nth-of-type(7) {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
 body .bookmaker-board .tab-content .tab-pane .table .date-time-container .time {
   color: #F2F2F2;
   font-weight: bold;
@@ -662,7 +669,7 @@ body .bookmaker-board .tab-content .tab-pane .table .date-time-container .date {
 body .bookmaker-board .tab-content .tab-pane .teams-logo {
   position: relative;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1030px) {
   body .bookmaker-board .tab-content .tab-pane .teams-logo {
     display: none;
   }
@@ -686,42 +693,41 @@ body .bookmaker-board .tab-content .tab-pane .teams-logo .team-logo-item .team-l
   height: 30px;
   width: 30px;
 }
+body .bookmaker-board .tab-content .tab-pane .playing-teams {
+  font-size: 0.85rem;
+}
 @media (max-width: 1024px) {
   body .bookmaker-board .tab-content .tab-pane .playing-teams {
     padding-left: 0.3rem !important;
   }
 }
+body .bookmaker-board .tab-content .tab-pane .playing-teams .score:last-of-type, body .bookmaker-board .tab-content .tab-pane .playing-teams .playing-time:last-of-type {
+  border-right: 1px solid #F2F2F2;
+  padding-right: 0.8rem;
+}
 @media (max-width: 520px) {
-  body .bookmaker-board .tab-content .tab-pane .playing-teams .score {
+  body .bookmaker-board .tab-content .tab-pane .playing-teams .score, body .bookmaker-board .tab-content .tab-pane .playing-teams .playing-time {
     font-size: 0.625rem;
   }
 }
 @media (min-width: 520px) and (max-width: 990px) {
-  body .bookmaker-board .tab-content .tab-pane .playing-teams .score {
+  body .bookmaker-board .tab-content .tab-pane .playing-teams .score, body .bookmaker-board .tab-content .tab-pane .playing-teams .playing-time {
     font-size: 0.8rem;
   }
 }
-body .bookmaker-board .tab-content .tab-pane .playing-teams .score .team-name, body .bookmaker-board .tab-content .tab-pane .playing-teams .score .score-value {
+body .bookmaker-board .tab-content .tab-pane .playing-teams .score .team-name, body .bookmaker-board .tab-content .tab-pane .playing-teams .score .score-value, body .bookmaker-board .tab-content .tab-pane .playing-teams .playing-time .team-name, body .bookmaker-board .tab-content .tab-pane .playing-teams .playing-time .score-value {
   color: #F2F2F2;
   font-weight: lighter;
 }
-body .bookmaker-board .tab-content .tab-pane .playing-teams .score .team-name.winner, body .bookmaker-board .tab-content .tab-pane .playing-teams .score .score-value.winner {
+body .bookmaker-board .tab-content .tab-pane .playing-teams .score .team-name.winner, body .bookmaker-board .tab-content .tab-pane .playing-teams .score .score-value.winner, body .bookmaker-board .tab-content .tab-pane .playing-teams .playing-time .team-name.winner, body .bookmaker-board .tab-content .tab-pane .playing-teams .playing-time .score-value.winner {
   font-weight: bold;
 }
-body .bookmaker-board .tab-content .tab-pane .playing-teams .score .team-name {
+body .bookmaker-board .tab-content .tab-pane .playing-teams .score .team-name, body .bookmaker-board .tab-content .tab-pane .playing-teams .playing-time .team-name {
   margin-left: 1rem;
 }
 @media (max-width: 1024px) {
-  body .bookmaker-board .tab-content .tab-pane .playing-teams .score .team-name {
+  body .bookmaker-board .tab-content .tab-pane .playing-teams .score .team-name, body .bookmaker-board .tab-content .tab-pane .playing-teams .playing-time .team-name {
     margin-left: 0;
-  }
-}
-body .bookmaker-board .tab-content .tab-pane .playing-teams .score .score-value {
-  margin-right: 1rem;
-}
-@media (max-width: 1024px) {
-  body .bookmaker-board .tab-content .tab-pane .playing-teams .score .score-value {
-    margin-right: 0;
   }
 }
 @media (max-width: 768px) {
@@ -731,6 +737,11 @@ body .bookmaker-board .tab-content .tab-pane .playing-teams .score .score-value 
 }
 @media (min-width: 990px) and (max-width: 1200px) {
   body .bookmaker-board .tab-content .tab-pane .handicap, body .bookmaker-board .tab-content .tab-pane .over, body .bookmaker-board .tab-content .tab-pane .under {
+    display: none;
+  }
+}
+@media (min-width: 990px) and (max-width: 1332px) {
+  body .bookmaker-board .tab-content .tab-pane .over, body .bookmaker-board .tab-content .tab-pane .under {
     display: none;
   }
 }
@@ -761,7 +772,7 @@ body .bookmaker-board .tab-content .tab-pane .btn-price {
     width: 4rem;
   }
 }
-body .bookmaker-board .tab-content .tab-pane .btn-price:focus {
+body .bookmaker-board .tab-content .tab-pane .btn-price.active {
   box-shadow: none;
   background-color: #21C299;
   color: #F2F2F2;
@@ -802,141 +813,294 @@ body .bookmaker-board .tab-content .tab-pane .btn-sort {
 body .bookmaker-board .tab-content .tab-pane .btn-sort:focus {
   box-shadow: none;
 }
-
-.sport-sidebar {
+body .sport-sidebar {
   z-index: 3;
 }
-.sport-sidebar .sidebar {
-  padding: 1.5rem;
+@media (max-width: 990px) {
+  body .sport-sidebar {
+    margin-bottom: 1rem;
+  }
+}
+body .sport-sidebar .sidebar {
+  padding: 1rem;
   background-color: #1A404F;
   border-radius: 20px;
-  display: inline-block;
   transition: all 0.2s;
-  width: 120%;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
 }
-.sport-sidebar .sidebar .sidebar-toggle {
+@media (min-width: 990px) {
+  body .sport-sidebar .sidebar {
+    width: 5rem;
+  }
+}
+body .sport-sidebar .sidebar .sidebar-toggle {
   color: #21C299;
   font-size: 2rem;
   padding: 0;
   margin-left: 0.5rem;
+  text-align: left;
 }
-.sport-sidebar .sidebar .sidebar-toggle:focus {
+body .sport-sidebar .sidebar .sidebar-toggle:focus {
   outline: none;
   box-shadow: none;
 }
-.sport-sidebar .sidebar .nav-item {
-  margin: 1.3rem 0;
+body .sport-sidebar .sidebar .nav-item {
+  margin: 0.7rem 0;
 }
-.sport-sidebar .sidebar .nav-item:last-of-type {
+@media (max-width: 520px) {
+  body .sport-sidebar .sidebar .nav-item {
+    margin: 0;
+  }
+}
+@media (min-width: 520px) and (max-width: 990px) {
+  body .sport-sidebar .sidebar .nav-item {
+    margin: 0 0.5rem;
+  }
+}
+body .sport-sidebar .sidebar .nav-item:last-of-type {
   margin-bottom: 0;
 }
-.sport-sidebar .sidebar .nav-item .nav-link .sport-name, .sport-sidebar .sidebar .nav-item .nav-link .badge {
+body .sport-sidebar .sidebar .nav-item .nav-link {
+  color: #F2F2F2;
+  font-size: 1.875rem;
+  padding: 0.5rem;
+}
+@media (max-width: 600px) {
+  body .sport-sidebar .sidebar .nav-item .nav-link {
+    font-size: 1.1rem;
+  }
+}
+body .sport-sidebar .sidebar .nav-item .nav-link .sport-name, body .sport-sidebar .sidebar .nav-item .nav-link .badge {
   display: none;
 }
-.sport-sidebar .sidebar.opened {
-  width: 400%;
+body .sport-sidebar .sidebar .nav-item .nav-link .fa-futbol, body .sport-sidebar .sidebar .nav-item .nav-link .fa-basketball-ball, body .sport-sidebar .sidebar .nav-item .nav-link .fa-volleyball-ball, body .sport-sidebar .sidebar .nav-item .nav-link .fa-hockey-puck,
+body .sport-sidebar .sidebar .nav-item .nav-link .fa-chess-knight, body .sport-sidebar .sidebar .nav-item .nav-link .fa-football-ball, body .sport-sidebar .sidebar .nav-item .nav-link .fa-tennis-ball, body .sport-sidebar .sidebar .nav-item .nav-link .fa-headset {
+  display: block;
+}
+body .sport-sidebar .sidebar .nav-item .nav-link .sport-logo-img {
+  display: none;
+}
+body .sport-sidebar .sidebar .nav-item .nav-link.active {
+  background-color: #1DA885;
+  box-shadow: 0 0 10px #198F71;
+  border-radius: 10px !important;
+}
+body .sport-sidebar .sidebar .nav-item .nav-link.active .fa-futbol, body .sport-sidebar .sidebar .nav-item .nav-link.active .fa-basketball-ball, body .sport-sidebar .sidebar .nav-item .nav-link.active .fa-volleyball-ball, body .sport-sidebar .sidebar .nav-item .nav-link.active .fa-hockey-puck,
+body .sport-sidebar .sidebar .nav-item .nav-link.active .fa-chess-knight, body .sport-sidebar .sidebar .nav-item .nav-link.active .fa-football-ball, body .sport-sidebar .sidebar .nav-item .nav-link.active .fa-tennis-ball, body .sport-sidebar .sidebar .nav-item .nav-link.active .fa-headset {
+  display: none;
+}
+body .sport-sidebar .sidebar .nav-item .nav-link.active .sport-logo-img {
+  display: block;
+  height: 30px;
+  width: 30px;
+}
+@media (max-width: 600px) {
+  body .sport-sidebar .sidebar .nav-item .nav-link.active .sport-logo-img {
+    height: 1.1rem;
+    width: 1.1rem;
+  }
+}
+body .sport-sidebar .sidebar.opened {
+  width: 20rem;
   background-color: rgba(26, 64, 79, 0.9);
 }
-.sport-sidebar .sidebar.opened .nav-link .sport-name, .sport-sidebar .sidebar.opened .nav-link .badge {
+body .sport-sidebar .sidebar.opened .nav-link .sport-name, body .sport-sidebar .sidebar.opened .nav-link .badge {
   font-size: 20px;
   color: #F2F2F2;
   font-weight: 200;
   display: inline-block;
 }
-.sport-sidebar .sidebar.opened .nav-link .badge {
+body .sport-sidebar .sidebar.opened .nav-link .badge {
   font-weight: normal;
   font-size: 1rem;
 }
-.sport-sidebar .sidebar.opened .nav-link.active .sport-name, .sport-sidebar .sidebar.opened .nav-link.active .badge {
+body .sport-sidebar .sidebar.opened .nav-link.active .sport-name, body .sport-sidebar .sidebar.opened .nav-link.active .badge {
   color: #1A404F;
   font-weight: 500;
 }
-
-.main-bet .main-bet-header {
-  background-image: url(../img/basketball.png);
-  -webkit-background-size: cover;
+body .main-bet-board {
+  margin-bottom: 2rem;
+}
+body .main-bet-board .main-bet-header {
+  background-image: url(../../assets/img/basketball.png);
   background-size: cover;
   border-radius: 20px;
-  justify-content: center;
-  padding: 3rem 0;
+  padding: 5rem 1rem;
   box-shadow: 0 3px 6px #010326;
   margin-bottom: 2rem;
 }
-.main-bet .main-bet-header .host-team, .main-bet .main-bet-header .guest-team, .main-bet .main-bet-header .date-time-container {
+@media (max-width: 520px) {
+  body .main-bet-board .main-bet-header {
+    padding: 3rem 1rem;
+    margin-bottom: 1rem;
+  }
+}
+body .main-bet-board .main-bet-header .team-name {
+  color: #F2F2F2;
+  font-size: 1rem;
   background-color: rgba(6, 38, 51, 0.7);
-  padding: 1rem;
-  text-align: center;
-  width: 13rem;
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  min-height: 4rem;
 }
-.main-bet .main-bet-header .host-team {
+body .main-bet-board .main-bet-header .team-name:first-of-type {
   border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-.main-bet .main-bet-header .guest-team {
   border-top-right-radius: 10px;
+}
+body .main-bet-board .main-bet-header .team-name:last-of-type {
+  border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.main-bet .main-bet-header .date-time-container {
-  width: 16rem;
-  padding: 2rem 0.5rem;
+@media (min-width: 576px) {
+  body .main-bet-board .main-bet-header .team-name:first-of-type {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+  body .main-bet-board .main-bet-header .team-name:last-of-type {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  body .main-bet-board .main-bet-header .team-name {
+    font-size: 0.85rem;
+  }
+}
+body .main-bet-board .main-bet-header .team-name.live {
   border-radius: 10px;
 }
-.main-bet .main-bet-body .nav-pills {
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-.main-bet .main-bet-body .nav-pills .nav-item {
-  margin-bottom: 1rem;
-  margin-right: 0 !important;
-  width: 22%;
-}
-.main-bet .main-bet-body .nav-pills .nav-item .nav-link {
-  font-size: 14px;
-  background-color: #045955;
-  border-radius: 10px;
+body .main-bet-board .main-bet-header .date-time {
+  color: #F2F2F2;
+  font-size: 1rem;
+  background-color: rgba(6, 38, 51, 0.7);
   text-align: center;
-  width: 100%;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  min-height: 6rem;
 }
-.main-bet .main-bet-body .nav-pills .nav-item .nav-link.active {
-  background-color: #21C299;
-  box-shadow: none;
+@media (min-width: 576px) and (max-width: 1024px) {
+  body .main-bet-board .main-bet-header .date-time {
+    font-size: 0.85rem;
+    padding: 1.5rem 1rem;
+  }
 }
-.main-bet .main-bet-body .tab-content .tab-pane {
-  background-color: #1A404F;
-  padding: 1rem 1rem 0 1rem;
+body .main-bet-board .main-bet-header .game-score {
+  color: #F2F2F2;
+  min-height: 6rem;
+  padding: 2rem;
+  font-size: 2.5rem;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
 }
-.main-bet .main-bet-body .tab-content .tab-pane .btn-bet {
+@media (min-width: 576px) and (max-width: 990px) {
+  body .main-bet-board .main-bet-header .game-score {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 990px) and (max-width: 1200px) {
+  body .main-bet-board .main-bet-header .game-score {
+    width: 10rem;
+  }
+}
+body .main-bet-board .main-bet-header .game-score .score-value:nth-child(odd) {
+  background-color: rgba(6, 38, 51, 0.7);
+  padding: 1rem 0.75rem;
+  border-radius: 10px;
+}
+body .main-bet-board .main-bet-header .live-time {
+  display: inline-block;
+  padding: 0.25rem 2rem;
+  color: #21C299;
+  font-size: 1.25rem;
+  border: 1.5px solid #21C299;
+  border-radius: 15px;
+  font-weight: 500;
+}
+body .main-bet-board .main-bet-body .nav-pills .nav-item {
   width: 45%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  body .main-bet-board .main-bet-body .nav-pills .nav-item {
+    width: 24%;
+  }
+}
+body .main-bet-board .main-bet-body .nav-pills .nav-item .nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #045955;
+  box-shadow: 0 3px 6px rgba(1, 3, 38, 0.5);
+  border-radius: 15px;
+  height: 3rem;
+  color: #F2F2F2;
+  padding: 0.5rem;
+}
+body .main-bet-board .main-bet-body .nav-pills .nav-item .nav-link.active {
+  background-color: #21C299;
+}
+@media (max-width: 520px) {
+  body .main-bet-board .main-bet-body .nav-pills .nav-item .nav-link {
+    font-size: 0.85rem;
+  }
+}
+@media (min-width: 990px) and (max-width: 1200px) {
+  body .main-bet-board .main-bet-body .nav-pills .nav-item .nav-link {
+    font-size: 0.75rem;
+  }
+}
+body .main-bet-board .main-bet-body .bet-container {
+  background-color: #1A404F;
+  border-radius: 20px;
+  padding-top: 1rem;
+  box-shadow: 0 3px 6px rgba(1, 3, 38, 0.5);
+}
+body .main-bet-board .main-bet-body .bet-container .bet-btn {
   background-color: #F2F2F2;
   border-radius: 15px;
-  box-shadow: 0 3px 6px #198F71;
+  text-align: left;
   color: #083040;
+  padding: 0.75rem 1rem;
+  width: 100%;
   margin-bottom: 1rem;
 }
-.main-bet .main-bet-body .tab-content .tab-pane .btn-bet .bet-count {
+body .main-bet-board .main-bet-body .bet-container .bet-btn .bet-value {
   color: #21C299;
 }
-
+body .main-bet-board .main-bet-body .bet-container .bet-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+@media (min-width: 990px) and (max-width: 1200px) {
+  body .main-bet-board .main-bet-body .bet-container .bet-btn {
+    font-size: 0.75rem;
+  }
+}
 @media (max-width: 990px) {
-  .bet-slip {
+  body .bet-slip {
     padding: 0;
   }
 }
-.bet-slip .bet-slip-card {
+body .bet-slip .bet-slip-card {
   border-radius: 20px;
   background-color: #1A404F;
   padding: 1rem;
 }
-.bet-slip .bet-slip-card .bet-slip-card-header h2 {
+body .bet-slip .bet-slip-card .bet-slip-card-header h2 {
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.bet-slip .bet-slip-card .bet-slip-card-header .nav-tabs {
+body .bet-slip .bet-slip-card .bet-slip-card-header .nav-tabs {
   background-color: #062633;
   border: none;
   display: flex;
@@ -947,7 +1111,7 @@ body .bookmaker-board .tab-content .tab-pane .btn-sort:focus {
   border-top: 1px solid #1DA885;
   padding: 0 1rem;
 }
-.bet-slip .bet-slip-card .bet-slip-card-header .nav-tabs .nav-item .nav-link {
+body .bet-slip .bet-slip-card .bet-slip-card-header .nav-tabs .nav-item .nav-link {
   border-bottom: 2px solid transparent;
   color: #1DA885;
   font-weight: lighter;
@@ -955,10 +1119,16 @@ body .bookmaker-board .tab-content .tab-pane .btn-sort:focus {
   padding: 1rem 0.5rem;
   font-size: 0.875rem;
 }
-.bet-slip .bet-slip-card .bet-slip-card-header .nav-tabs .nav-item .nav-link:hover {
+@media (min-width: 1200px) and (max-width: 1290px) {
+  body .bet-slip .bet-slip-card .bet-slip-card-header .nav-tabs .nav-item .nav-link {
+    font-size: 0.785rem;
+    padding: 1rem 0;
+  }
+}
+body .bet-slip .bet-slip-card .bet-slip-card-header .nav-tabs .nav-item .nav-link:hover {
   border: none;
 }
-.bet-slip .bet-slip-card .bet-slip-card-header .nav-tabs .nav-item .nav-link.active {
+body .bet-slip .bet-slip-card .bet-slip-card-header .nav-tabs .nav-item .nav-link.active {
   background-color: transparent;
   border-bottom: 2px solid #1DA885;
   border-top: none;
@@ -966,39 +1136,40 @@ body .bookmaker-board .tab-content .tab-pane .btn-sort:focus {
   border-left: none;
   font-weight: normal;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body {
+body .bet-slip .bet-slip-card .bet-slip-card-body {
   max-height: 420px;
   overflow-y: scroll;
   padding-right: 5px;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body::-webkit-scrollbar {
+body .bet-slip .bet-slip-card .bet-slip-card-body::-webkit-scrollbar {
   width: 6px;
   background-color: transparent;
   position: absolute;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body::-webkit-scrollbar-thumb {
+body .bet-slip .bet-slip-card .bet-slip-card-body::-webkit-scrollbar-thumb {
   background-color: #21C299;
   border-radius: 10px;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket {
   background-color: #F2F2F2;
   border-radius: 15px;
   padding: 1rem;
   box-shadow: 0 3px 6px #198F71;
   margin-bottom: 1rem;
+  position: relative;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket:last-of-type {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket:last-of-type {
   margin-bottom: 0;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .close {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .close {
   top: 0;
   right: 0.5rem;
   color: #198F71;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .teams-logo {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .teams-logo {
   margin-bottom: 0.2rem;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .teams-logo .team-logo-item {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .teams-logo .team-logo-item {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -1008,96 +1179,100 @@ body .bookmaker-board .tab-content .tab-pane .btn-sort:focus {
   margin-right: 0.5rem;
   padding-top: 2px;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .teams-logo .team-logo-item .team-logo-img {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .teams-logo .team-logo-item .team-logo-img {
   width: 20px;
   height: 20px;
   vertical-align: top;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .teams-logo .team-name {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .teams-logo .team-name {
   color: #1A404F;
   font-size: 0.9rem;
   margin-bottom: 0;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .teams-logo.host-team .team-name {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .teams-logo.host-team .team-name {
   font-weight: lighter;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .teams-logo.guest-team {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .teams-logo.guest-team {
   margin-bottom: 1rem;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .price {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .price {
   margin-bottom: 1rem;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .price .selected-team {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .price .selected-team {
   color: #1A404F;
   font-size: 1.1rem;
   margin-bottom: 0;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .price .selected-bet {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .price .selected-bet {
   border-radius: 15px;
   background-color: #1DA885;
   padding: 0 1rem;
   font-size: 1.1rem;
   margin-bottom: 0;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .stakeWin .form-control {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .stakeWin .form-control {
   border-color: #1DA885;
   border-radius: 15px;
   height: auto;
   padding: 0.2rem 0.7rem;
   color: #1A404F;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .stakeWin .form-control::placeholder {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .stakeWin .form-control::placeholder {
   color: #CDCBCB;
   text-align: center;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .stakeWin .form-control:focus {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .stakeWin .form-control:focus {
   box-shadow: none;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .stakeWin .form-control.stake {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .stakeWin .form-control.stake {
   margin-right: 0.5rem;
 }
-.bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .stakeWin .form-control.win {
+body .bet-slip .bet-slip-card .bet-slip-card-body .tab-content .tab-pane .bet-slip-ticket .stakeWin .form-control.win {
   margin-left: 0.5rem;
 }
-.bet-slip .bet-slip-card .bet-slip-card-footer {
-  padding: 0 1rem 0 1rem;
-}
-.bet-slip .bet-slip-card .bet-slip-card-footer:before {
-  content: "";
-  display: block;
-  background-image: url(../../assets/img/group51.svg);
-  height: 16px;
-  margin: 0 -2rem 1rem -2rem;
-  background-size: cover;
-  position: relative;
-  top: -14px;
-  background-repeat: no-repeat;
-}
-.bet-slip .bet-slip-card .bet-slip-card-footer .total, .bet-slip .bet-slip-card .bet-slip-card-footer .amount {
+body .bet-slip .bet-slip-card .bet-slip-card-body .bet-slip-card-body-background {
+  color: #F2F2F2;
   font-size: 1.1rem;
 }
-.bet-slip .bet-slip-card .bet-slip-card-footer .place-bet {
+body .bet-slip .bet-slip-card .bet-slip-card-body .bet-slip-card-body-background p:first-of-type {
+  color: #21C299;
+}
+body .bet-slip .bet-slip-card .bet-slip-card-footer {
+  padding: 1.5rem 1rem 0 1rem;
+  border-top: 1px solid #21C299;
+}
+body .bet-slip .bet-slip-card .bet-slip-card-footer .total, body .bet-slip .bet-slip-card .bet-slip-card-footer .amount {
+  font-size: 1.1rem;
+}
+body .bet-slip .bet-slip-card .bet-slip-card-footer .place-bet {
   color: #21C299;
   font-size: 1.5rem;
   padding: 0.5rem 3rem;
   background-color: #062633;
-  box-shadow: 0 3rem 6rem #062633;
+  box-shadow: 0 3px 6px #010326;
   border-radius: 20px;
   width: 100%;
 }
 @media (min-width: 990px) and (max-width: 1024px) {
-  .bet-slip .bet-slip-card .bet-slip-card-footer .place-bet {
+  body .bet-slip .bet-slip-card .bet-slip-card-footer .place-bet {
     padding: 0.5rem 2rem;
+    font-size: 1.3rem;
   }
 }
-.bet-slip .bet-slip-card .bet-slip-card-footer .place-bet:focus {
+@media (min-width: 1200px) and (max-width: 1370px) {
+  body .bet-slip .bet-slip-card .bet-slip-card-footer .place-bet {
+    padding: 0.5rem 2rem;
+    font-size: 1.3rem;
+  }
+}
+body .bet-slip .bet-slip-card .bet-slip-card-footer .place-bet:focus {
   box-shadow: none;
 }
-
-.btn-bet-slip, .btn-bet-slip:focus {
-  width: 10rem;
+body .btn-bet-slip, body .btn-bet-slip:focus {
+  width: 12rem;
   height: 4rem;
   left: calc(50% - 5rem);
+  padding: 0 28px;
   background-color: #21C299;
   border-radius: 10px 10px 0 0;
   color: #1A404F;
@@ -1107,32 +1282,31 @@ body .bookmaker-board .tab-content .tab-pane .btn-sort:focus {
   outline: none;
 }
 @media (min-width: 990px) {
-  .btn-bet-slip, .btn-bet-slip:focus {
+  body .btn-bet-slip, body .btn-bet-slip:focus {
     display: none;
   }
 }
-.btn-bet-slip .badge-light, .btn-bet-slip:focus .badge-light {
-  margin-left: 1rem;
+body .btn-bet-slip .badge-light, body .btn-bet-slip:focus .badge-light {
+  margin-left: 0.2rem;
   background-color: #1A404F;
   color: #F2F2F2;
 }
-
-footer {
+body footer {
   margin: 0 -3rem 0.5rem -3rem;
   border-top: 1px solid #21C299;
   border-bottom: 1px solid #21C299;
 }
 @media (max-width: 767px) {
-  footer {
+  body footer {
     margin: 0 -0.5rem 0.5rem -0.5rem;
   }
 }
-footer .nav {
+body footer .nav {
   border-top: 1px solid #21C299;
   border-bottom: 1px solid #21C299;
   margin: 0.3rem 0;
 }
-footer .nav .nav-item .nav-link {
+body footer .nav .nav-item .nav-link {
   color: #F2F2F2;
 }
 
